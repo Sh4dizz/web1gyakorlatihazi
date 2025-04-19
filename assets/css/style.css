@@ -1,0 +1,177 @@
+/* Alap stílusok */
+:root {
+    --primary-color: #4e9f3d;
+    --secondary-color: #38703d;
+    --accent-color: #f9b208;
+    --text-color: #333;
+    --light-bg: #f8f9fa;
+    --border-radius: 8px;
+}
+
+body {
+    color: var(--text-color);
+    font-family: 'Nunito', 'Segoe UI', sans-serif;
+    padding-bottom: 70px;
+}
+
+/* Fejléc stílusok */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color)) !important;
+}
+
+.navbar-brand,
+.navbar .nav-link,
+.navbar-text {
+    color: white !important;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Kártya stílusok */
+.card {
+    border-radius: var(--border-radius);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    overflow: hidden;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+}
+
+.card img.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Gombok */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.btn-success {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+/* Főoldal */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    margin-top: -24px;
+    margin-bottom: 30px;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Képgaléria */
+.gallery-card {
+    margin-bottom: 25px;
+}
+
+/* Állat kártyák */
+.animal-card img {
+    transition: all 0.3s;
+}
+
+.animal-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Lábléc */
+footer {
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--accent-color);
+}
+
+/* Reszponzív beállítások */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 20px;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Állat adatlap stílusa */
+.animal-details {
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.animal-img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+/* Táblázat stílusok */
+.table-container {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table thead th {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+/* Üzenetek és hibajelzések */
+.alert {
+    border-radius: var(--border-radius);
+}
